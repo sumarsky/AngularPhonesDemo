@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace AngularJSWebApiEmpty
+namespace AngularPhonesDemo
 {
     public static class WebApiConfig
     {

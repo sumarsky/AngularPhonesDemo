@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Web.Http;
 
-namespace AngularJSWebApiEmpty.Controllers
+namespace AngularPhonesDemo.Controllers
 {
     public class PhoneObject
     {

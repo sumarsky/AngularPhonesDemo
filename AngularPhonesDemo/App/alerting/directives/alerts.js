@@ -3,7 +3,7 @@
     var alerts = function (alerting) {
         return {
             restrict: "AE",
-            templateUrl: "alerting/views/alerts.html",
+            templateUrl: "App/alerting/views/alerts.html",
             scope: true,
             controller: "alertController",
             link: function (scope) {
