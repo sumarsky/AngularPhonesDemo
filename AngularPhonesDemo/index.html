@@ -1,12 +1,60 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="app">
 <head>
-    <title></title>
+    <title>App</title>
+    <meta charset="utf-8" />
+
+    <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!--
+    font-family: 'Nobile', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Lobster', cursive;
+    -->
+
+    <style>
+        body {
+            font-family: 'Nobile', sans-serif;
+        }
+
+        a.navbar-brand, a.h3, h2 {
+            font-family: 'Lobster', cursive;
+        }
+    </style>
 </head>
-<body ng-app="app">
-    <script src="Scripts/angular.js"></script>
-    <script src="Scripts/angular-animate.js"></script>
-    <script src="Scripts/angular-route.js"></script>
+<body>
+    <nav ng-include="'nav.html'"></nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div ng-view></div>
+            </div>
+            <div class="col-sm-4">
+                <alerts></alerts>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+
     <script src="App/app.js"></script>
+    <script src="App/routes.js"></script>
+
+    <script src="App/phones/services/phonedb.js"></script>
+    <script src="App/alerting/services/alerting.js"></script>
+
+    <script src="App/alerting/directives/alerts.js"></script>
+
+    <script src="App/alerting/controllers/alertController.js"></script>
+    <script src="App/phones/controllers/phoneListController.js"></script>
+    <script src="App/phones/controllers/phoneDetailController.js"></script>
 </body>
 </html>
