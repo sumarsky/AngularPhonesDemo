@@ -79,7 +79,6 @@
     <Content Include="App\phones\controllers\phoneDetailController.js" />
     <Content Include="App\phones\controllers\phoneListController.js" />
     <Content Include="App\alerting\directives\alerts.js" />
-    <Content Include="App\index.html" />
     <Content Include="App\alerting\services\alerting.js" />
     <Content Include="App\phones\services\phonedb.js" />
     <Content Include="App\alerting\views\alerts.html" />
