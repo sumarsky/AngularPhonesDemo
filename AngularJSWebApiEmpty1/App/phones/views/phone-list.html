@@ -1,0 +1,23 @@
+﻿<div ng-controller="phoneListController as vm">
+
+    <div class="pull-right">
+        <span class="glyphicon glyphicon-search"></span>
+        <input type="text" value="" placeholder="Search" ng-model="searchText" />
+    </div>
+
+    <h2>{{ vm.title }}</h2>
+    <hr />
+    <div ng-repeat="phone in vm.phones | filter:searchText">
+        <a href="#/phones/{{phone.id}}" class="h3">{{phone.name}}</a>
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#/phones/{{phone.id}}" class="thumbnail">
+                    <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}">
+                </a>
+            </div>
+            <div class="col-sm-9">
+                <p>{{phone.snippet}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+﻿<!--<input type="button" class="btn btn-primary" value="Alert Me!" ng-click="addAlert()"/>-->
+<div ng-show="hasAlerts()">
+    <h2>Alerts</h2>
+    <hr />
+</div>
+<div ng-repeat="alert in currentAlerts" class="alert alert-{{alert.type}}">
+    {{ alert.message }}
+    <div class="close" ng-click="removeAlert(alert)">
+        <span class="glyphicon glyphicon-remove"></span>
+    </div>
+</div>

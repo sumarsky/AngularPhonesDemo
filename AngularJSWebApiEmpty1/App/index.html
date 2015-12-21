@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>App</title>
+    <meta charset="utf-8" />
+
+    <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!--
+    font-family: 'Nobile', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Lobster', cursive;
+    -->
+
+    <style>
+        body {
+            font-family: 'Nobile', sans-serif;
+        }
+
+        a.navbar-brand, a.h3, h2 {
+            font-family: 'Lobster', cursive;
+        }
+    </style>
+</head>
+<body>
+    <nav ng-include="'nav.html'"></nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div ng-view></div>
+            </div>
+            <div class="col-sm-4">
+                <alerts></alerts>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../Scripts/angular-route.min.js"></script>
+    <script src="../Scripts/angular-animate.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="routes.js"></script>
+
+    <script src="phones/services/phonedb.js"></script>
+    <script src="alerting/services/alerting.js"></script>
+
+    <script src="alerting/directives/alerts.js"></script>
+
+    <script src="alerting/controllers/alertController.js"></script>
+    <script src="phones/controllers/phoneListController.js"></script>
+    <script src="phones/controllers/phoneDetailController.js"></script>
+</body>
+</html>
