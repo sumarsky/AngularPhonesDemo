@@ -12,9 +12,9 @@
             $routeProvider.when(route.url, route.settings);
         });
 
-        $routeProvider.otherwise({ redirectTo: routes[0].url });
+        $routeProvider.otherwise({ redirectTo: "/" });
 
-        //$locationProvider.hashPrefix("!").html5Mode(true);
+        $locationProvider.hashPrefix("!").html5Mode(true);
     };
 
     app.config(registerRoutes);
