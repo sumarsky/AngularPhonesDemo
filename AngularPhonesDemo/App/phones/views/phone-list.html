@@ -8,10 +8,10 @@
     <h2>{{ vm.title }}</h2>
     <hr />
     <div ng-repeat="phone in vm.phones | filter:searchText">
-        <a ng-href="#/phones/{{phone.id}}" class="h3">{{phone.name}}</a>
+        <a ng-href="/phones/{{phone.id}}" class="h3">{{phone.name}}</a>
         <div class="row">
             <div class="col-sm-3">
-                <a ng-href="#/phones/{{phone.id}}" class="thumbnail">
+                <a ng-href="/phones/{{phone.id}}" class="thumbnail">
                     <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}">
                 </a>
             </div>

@@ -8,6 +8,7 @@
     app.config(["$routeProvider", "$locationProvider", "routes", routeConfigurator]);
 
     function routeConfigurator($routeProvider, $locationProvider, routes) {
+        $locationProvider.html5Mode(true);
 
         routes.forEach(function (r) {
             $routeProvider.when(r.url, r.config);
