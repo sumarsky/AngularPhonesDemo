@@ -13,8 +13,6 @@
             $routeProvider.when(r.url, r.config);
         });
         $routeProvider.otherwise({ redirectTo: "/" });
-
-        $locationProvider.hashPrefix("!").html5Mode(true);
     }
     // Define the routes 
     function getRoutes() {
