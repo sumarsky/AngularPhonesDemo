@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Jasmine Runner</title>
+    <link href="css/jasmine.css" rel="stylesheet" />
+    <script src="scripts/jasmine.js"></script>
+    <script src="scripts/jasmine-html.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="http://localhost:56724/Scripts/angular-animate.js"></script>
+    <script src="http://localhost:56724/Scripts/angular-route.js"></script>
+    <script src="scripts/angular-mocks.js"></script>
+    <script src="http://localhost:56724/App/app.js"></script>
+    <script src="alertcontrollertest.js"></script>
+    <script src="http://localhost:56724/App/alerting/controllers/alertController.js"></script>
+    <script src="http://localhost:56724/App/alerting/services/alerting.js"></script>
+    <script>
+        (function () {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 250;
+            var htmlReporter = new jasmine.TrivialReporter();
+            jasmineEnv.addReporter(htmlReporter);
+            jasmineEnv.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            window.onload = function () {
+                document.querySelector(".version").innerHTML = jasmineEnv.versionString();
+                execJasmine();
+            };
+            function execJasmine() {
+                jasmineEnv.execute();
+            };
+        })();
+    </script>
+</head>
+<body>
+    <div class="version"></div>
+</body>
+</html>

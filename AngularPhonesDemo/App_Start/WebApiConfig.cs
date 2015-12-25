@@ -12,14 +12,9 @@ namespace AngularPhonesDemo
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApiWithId",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional },
-                constraints: new { id = @"\d+" }
-            );
-            config.Routes.MapHttpRoute(
                 name: "DefaultApiWithAction",
-                routeTemplate: "api/{controller}/{action}"
+                routeTemplate: "api/{controller}/{action}/{id}",
+                defaults: new { id = RouteParameter.Optional }
             );
         }
     }
