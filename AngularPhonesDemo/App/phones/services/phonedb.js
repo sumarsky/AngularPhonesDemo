@@ -1,14 +1,9 @@
 ﻿(function (app) {
 
     var phonedb = function ($http, $q) {
-        var dev = "http://localhost:56724";
-        var prod = "http://angularphonesdemo.apphb.com";
-
-        var host = prod;
-
         var getPhones = function () {
             var deferred = $q.defer();
-            $http.get(dev + "/api/Phones/GetPhones")
+            $http.get(location.origin + "/api/Phones/GetPhones")
                 .then(function (response) {
                     deferred.resolve(response);
                 }, function () {
@@ -19,7 +14,7 @@
 
         var getPhone = function (id) {
             var deferred = $q.defer();
-            $http.get(dev + "/api/Phones/Get/" + id)
+            $http.get(location.origin + "/api/Phones/Get/" + id)
                 .then(function (response) {
                     deferred.resolve(response);
                 }, function () {
