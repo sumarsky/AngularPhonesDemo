@@ -1,5 +1,5 @@
-﻿
-(function (app) {
+﻿(function (app) {
+    var controllerId = "phoneDetailController";
     var phoneDetailController = function ($routeParams, phonedb, alerting) {
         var vm = this;
 
@@ -17,7 +17,7 @@
                 }, function () {
                     alerting.addDanger("Problem occurred while retrieving data.");
                 });
-        };
+        }
     };
 
     app.controller("phoneDetailController", phoneDetailController);

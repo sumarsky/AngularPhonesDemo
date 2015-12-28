@@ -92,7 +92,9 @@
   <ItemGroup>
     <Content Include="App\app.js" />
     <Content Include="App\alerting\controllers\alertController.js" />
+    <Content Include="App\common\common.js" />
     <Content Include="App\phones\controllers\phoneDetailController.js" />
+    <Content Include="App\phones\controllers\phoneEditController.js" />
     <Content Include="App\phones\controllers\phoneListController.js" />
     <Content Include="App\alerting\directives\alerts.js" />
     <Content Include="App\alerting\services\alerting.js" />
@@ -101,20 +103,27 @@
     <Content Include="App\nav.html" />
     <Content Include="App\home.html" />
     <Content Include="App\phones\views\phone-detail.html" />
+    <Content Include="App\phones\views\phone-edit.html" />
     <Content Include="App\phones\views\phone-list.html" />
     <Content Include="App\routes.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />

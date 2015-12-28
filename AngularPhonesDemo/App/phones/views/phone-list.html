@@ -1,11 +1,17 @@
 ﻿<div ng-controller="phoneListController as vm">
-
+    
     <div class="pull-right">
         <span class="glyphicon glyphicon-search"></span>
-        <input type="text" value="" placeholder="Search" ng-model="searchText" />
+        <input type="text" value="" placeholder="Search" ng-model="searchText"/>
     </div>
 
-    <h2>{{ vm.title }}</h2>
+    <div>
+        <h2>{{ vm.title }}</h2>
+        <button class="btn btn-primary" ng-click="vm.addPhone()">
+            <i class="fa fa-plus"></i>New
+        </button>
+    </div>
+
     <hr />
     <div ng-repeat="phone in vm.phones | filter:searchText">
         <a ng-href="/phones/{{phone.Id}}" class="h3">{{phone.Name}}</a>

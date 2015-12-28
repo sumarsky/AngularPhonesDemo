@@ -1,7 +1,17 @@
 ﻿(function (app) {
 
-    var phonedb = function ($http, $q) {
-        var getPhones = function () {
+    var phonedb = function ($http, $q, $resource) {
+        var service = {
+            getPhone: getPhone,
+            getPhones: getPhones,
+            savePhone: savePhone
+        };
+
+        return service;
+
+        ////////////////////////////////
+
+        function getPhones() {
             var deferred = $q.defer();
             $http.get(location.origin + "/api/Phones/GetPhones")
                 .then(function (response) {
@@ -10,9 +20,9 @@
                     deferred.reject();
                 });
             return deferred.promise;
-        };
+        }
 
-        var getPhone = function (id) {
+        function getPhone(id) {
             var deferred = $q.defer();
             $http.get(location.origin + "/api/Phones/Get/" + id)
                 .then(function (response) {
@@ -21,12 +31,13 @@
                     deferred.reject();
                 });
             return deferred.promise;
-        };
+        }
 
-        return {
-            getPhone: getPhone,
-            getPhones: getPhones
-        };
+        function savePhone(phone) {
+            var url = "/api/Phones/Save";
+
+            return $resource(url).save(phone).$promise;
+        }
     }
 
     app.factory("phonedb", phonedb);

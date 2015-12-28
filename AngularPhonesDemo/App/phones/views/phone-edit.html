@@ -1,0 +1,46 @@
+﻿<form name="entryForm" class="form-horizontal" novalidate>
+    <div class="modal-header">
+        <h4 class="modal-title">{{vm.title}}</h4>
+    </div>
+    <div class="modal-body">
+        <div ng-if="vm.blEntry.BlacklistTypeId != 4">
+            <div class="form-group">
+                <div class="col-sm-12 required">
+                    <label for="Name">Name</label>
+                    <input type="text" id="Name" name="Name" class="form-control" maxlength="50" ng-model="vm.phone.Name" placeholder="Name">
+                    <ng-messages for="entryForm.Name.$error" ng-if="entryForm.Name.$dirty">
+                        <ng-message class="error-validation-box" when="required"><span class="fa fa-exclamation-triangle"></span> Name is required field.</ng-message>
+                    </ng-messages>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12 required">
+                    <label for="ImageUrl">ImageUrl</label>
+                    <input type="text" id="ImageUrl" name="ImageUrl" class="form-control" maxlength="50" ng-model="vm.phone.ImageUrl" placeholder="ImageUrl">
+                    <ng-messages for="entryForm.ImageUrl.$error" ng-if="entryForm.ImageUrl.$dirty">
+                        <ng-message class="error-validation-box" when="required"><span class="fa fa-exclamation-triangle"></span> ImageUrl is required field.</ng-message>
+                    </ng-messages>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12 required">
+                    <label for="Snippet">Snippet</label>
+                    <textarea id="Snippet" class="form-control" rows="5" maxlength="1000" ng-model="vm.phone.Snippet" placeholder="Snippet" required></textarea>
+                    <ng-messages for="entryForm.Snippet.$error" ng-if="entryForm.Snippet.$dirty">
+                        <ng-message class="error-validation-box" when="required"><span class="fa fa-exclamation-triangle"></span> Snippet is required field.</ng-message>
+                    </ng-messages>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <p class="error-validation-box" ng-show="vm.errorMessage.length > 0">
+            <span class="fa fa-exclamation-triangle"></span> {{vm.errorMessage}}
+        </p>
+        <button type="submit" class="btn btn-primary" data-dismiss="modal" ng-disabled="entryForm.$invalid || $root.isBusy" ng-click="vm.save(vm.phone)">
+            <i class="fa fa-save"></i>Save
+            <span class="fa fa-spinner fa-spin" ng-show="$root.isBusy"></span>
+        </button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.cancel()">Cancel</button>
+    </div>
+</form>

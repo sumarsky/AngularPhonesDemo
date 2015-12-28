@@ -33,5 +33,11 @@ namespace AngularPhonesDemo.Controllers
             var phone = _collection.FindOneAs<PhoneObject>(Query.EQ("_id", ObjectId.Parse(id)));
             return phone;
         }
+
+        [HttpPost]
+        public void Save(PhoneObject phone)
+        {
+            _collection.Insert(phone);
+        }
     }
 }
