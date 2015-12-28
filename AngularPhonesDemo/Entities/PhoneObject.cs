@@ -1,6 +1,6 @@
 using MongoDB.Bson;
 
-namespace AngularPhonesDemo.Controllers
+namespace AngularPhonesDemo.Entities
 {
     public class PhoneObject
     {

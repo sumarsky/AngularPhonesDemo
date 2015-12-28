@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Linq;
 using System.Web.Http;
+using AngularPhonesDemo.Entities;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
